@@ -11,17 +11,17 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
 </head>
 
-    {{add}}
-    {{remove}}
-
 <body>
     <br>
-    <form action = "http://localhost:5000/addJoiner" method = "POST" enctype = "multipart/form-data">
+    <h3>{{add}}</h3>
+    <h3>{{remove}}</h3>
+    <br>
+    <form action = "{{ url_for('addJoiner')}}" method = "POST" enctype = "multipart/form-data">
         <input type="text" name="addtext" placeholder="Emojis without space or any separator" required/>
         <button type="submit" value="crtsubmit" class="btn btn-primary btn-large">Create Emoji</button>
     </form>
     <br>
-    <form action = "http://localhost:5000/removeJoiner" method = "POST" enctype = "multipart/form-data">
+    <form action = "{{ url_for('removeJoiner')}}" method = "POST" enctype = "multipart/form-data">
         <input type="text" name="removetext" placeholder="Emoji to be broken down" required/>
         <button type="submit" value="remsubmit" class="btn btn-primary btn-large">Break Emoji</button>
     </form>

@@ -1,10 +1,10 @@
 
-import os
+# import os
 from flask import Flask, flash, redirect, render_template, request, url_for
 
 subu = Flask(__name__)
-subu.config['SECRET_KEY'] = 'subuliti'
-port = int(os.environ.get('PORT', 3000))
+# subu.config['SECRET_KEY'] = 'subuliti'
+# port = int(os.environ.get('PORT', 3000))
 
 
 @subu.route('/')
